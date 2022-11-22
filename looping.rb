@@ -1,5 +1,12 @@
+require "pry"
+
 def happy_new_year
-  # your code here
+  counter = 10
+  until counter == 0
+    puts counter
+    counter -= 1
+  end
+  puts "Happy New Year!"
 end
 
 # No need to modify this code! Use this to implement the fizzbuzz_printer method.
@@ -16,9 +23,25 @@ def fizzbuzz(num)
 end
 
 def fizzbuzz_printer
-  # your code here
+  #100.times do |i|
+  (1..100).each do |num|
+    puts fizzbuzz(num)
+  end
 end
 
 def reverse_string(str)
-  # your code here
+  counter = str.length
+  new_str = ""
+  counter.times do |i|
+    new_str = str[i] + new_str
+    #binding.pry
+  end
+  #binding.pry
+  #.length a thing in Ruby... time for google
+  # and can I deal with strings the same way as in javascript? Like str[0]?
+  new_str
 end
+
+reverse_string("hello")
+
+
